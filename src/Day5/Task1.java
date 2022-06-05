@@ -1,6 +1,6 @@
 package Day5;
 
-public class Day5Task1 {
+public class Task1 {
     public static void main(String[] args) {
 
         Car car1 = new Car();

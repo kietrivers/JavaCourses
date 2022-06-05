@@ -1,14 +1,4 @@
-package Day5;
-
-public class Day5Task2 {
-    public static void main(String[] args) {
-    Moto moto1 = new Moto("Black", "Yamaha", 1999);
-    System.out.println(moto1.getColor());
-    System.out.println(moto1.getModel());
-    System.out.println(moto1.getYear());
-
-    }
-}
+package Day6;
 
 
 class Moto {
@@ -26,5 +16,10 @@ class Moto {
 
     public int getYear()  { return year; }
 
-
+    public void info() {
+        System.out.println("This is motorcycle.");
+    }
+    public int yearDifference(int inputYear) {
+        return Math.abs(inputYear - year);
+    }
 }
