@@ -1,20 +1,4 @@
-package Day6;
-
-public class Task2 {
-    public static void main(String[] args){
-    Airplane airplane1 = new Airplane("Airbus", 1000, 300, 1999);
-    airplane1.info();
-    airplane1.setLength(5000);
-    airplane1.setYear(2020);
-    airplane1.setManufacturer("Boeing");
-    airplane1.fillUp(13);
-    airplane1.info();
-    airplane1.fillUp(15);
-    airplane1.info();
-
-
-    }
-}
+package Day7;
 
 class Airplane {
 
@@ -57,11 +41,22 @@ class Airplane {
     public void setManufacturer(String manufacturer) {
         this.manufacturer = manufacturer;
     }
-    public void fillUp(int fuel){
+    public int fillUp(int fuel){
         this.fuel += fuel;
-
+        return this.fuel;
     }
     public void info(){
         System.out.println(year + " " + manufacturer + " " + weight + " " +  length + " " + fuel );
+    }
+    public static void compareLength(Airplane A1, Airplane A2) {
+        if (A1.length > A2.length) {
+            System.out.println("1-st Airplane's length more then second.");
+        }
+        else if (A1.length < A2.length) {
+            System.out.println("Second Airplane's length more than 1-st. ");
+        }
+        else {
+            System.out.println("Their lengths are equal.");
+        }
     }
 }
