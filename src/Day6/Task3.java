@@ -4,6 +4,7 @@ public class Task3 {
     public static void main(String[] args){
         Teacher teacher = new Teacher("Math", "Teacher");
         Student student = new Student("Student");
+        Random random = new Random();
         teacher.evaluate(student);
 
     }
@@ -57,6 +58,9 @@ class Teacher{
                 grade = "A";
                 break;
 
+            case 5:
+                grade = "A";
+                break;
         }
         System.out.println("Teacher " + this.name + " graded : " + student.getName() + " in the subject: " + this.lesson +
                 " with grade: " + grade);
